@@ -1,2 +1,0 @@
-# bigscreen
-Created with CodeSandbox
