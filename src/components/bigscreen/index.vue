@@ -1,52 +1,54 @@
 <template>
-  <dv-full-screen-container>//å¤§å±ç»ä»¶
-    <div class="back">
-      <dv-border-box-11 title="疫 情 汇 总 大 屏" :titleWidth="400">
-        <div class="row">
-          <div class="left col">
-            <div class="yiqing-zonghe in-up">
-              <dv-border-box-10 :color="[, '#273d7b']">
-                <data-card4 :width="100"></data-card4>
-              </dv-border-box-10>
-            </div>
-            <div class="yiqing-city-list in-down">
-              <dv-border-box-12 :color="[, '#273d7b']">
-                <OpinionAnalysis></OpinionAnalysis>
-              </dv-border-box-12>
-            </div>
+  <!-- <dv-full-screen-container> -->
+  <!--//å¤§å±ç»ä»¶-->
+  <div class="back">
+    <dv-border-box-11 title="疫 情 汇 总 大 屏" :titleWidth="400">
+      <div class="row">
+        <div class="left col">
+          <div class="yiqing-zonghe in-up">
+            <dv-border-box-10 :color="[, '#273d7b']">
+              <data-card4 :width="100"></data-card4>
+            </dv-border-box-10>
           </div>
-          <div class="center col">
-            <DataTimeCard class="datetime"></DataTimeCard>
-            <div class="yiqing-map in-up">
-              <china-map :selectedArea.sync="selectedArea" :userjson="userjson"></china-map>
-            </div>
-            <div class="yiqing-other-list in-down">
-              <dv-border-box-13 :color="[, '#273d7b']">
-                <city-capsule :selectedProvince="selectedArea"></city-capsule>
-              </dv-border-box-13>
-            </div>
-          </div>
-          <div class="right col">
-            <div class="yiqing-chant in-up">
-              <dv-border-box-12 :color="[, '#273d7b']">
-                <other-countries></other-countries>
-              </dv-border-box-12>
-            </div>
-            <div class="yiqing-chant2">
-              <dv-border-box-8 :color="[, '#273d7b']">
-                <slot></slot>
-              </dv-border-box-8>
-            </div>
-            <div class="yiqing-airticle in-down">
-              <dv-border-box-10 :color="[, '#273d7b']">
-                <slot></slot>
-              </dv-border-box-10>
-            </div>
+          <div class="yiqing-city-list in-down">
+            <dv-border-box-12 :color="[, '#273d7b']">
+              <OpinionAnalysis></OpinionAnalysis>
+            </dv-border-box-12>
           </div>
         </div>
-      </dv-border-box-11>
-    </div>
-  </dv-full-screen-container>
+        <div class="center col">
+          <DataTimeCard class="datetime"></DataTimeCard>
+          <div class="yiqing-map in-up">
+            <!-- <china-map :selectedArea.sync="selectedArea" :userjson="userjson"></china-map> -->
+            <china-map :selectedArea.sync="selectedArea"></china-map>
+          </div>
+          <div class="yiqing-other-list in-down">
+            <dv-border-box-13 :color="[, '#273d7b']">
+              <city-capsule :selectedProvince="selectedArea"></city-capsule>
+            </dv-border-box-13>
+          </div>
+        </div>
+        <div class="right col">
+          <div class="yiqing-chant in-up">
+            <dv-border-box-12 :color="[, '#273d7b']">
+              <other-countries></other-countries>
+            </dv-border-box-12>
+          </div>
+          <div class="yiqing-chant2">
+            <dv-border-box-8 :color="[, '#273d7b']">
+              <slot></slot>
+            </dv-border-box-8>
+          </div>
+          <div class="yiqing-airticle in-down">
+            <dv-border-box-10 :color="[, '#273d7b']">
+              <slot></slot>
+            </dv-border-box-10>
+          </div>
+        </div>
+      </div>
+    </dv-border-box-11>
+  </div>
+  <!-- </dv-full-screen-container> -->
 </template>
 
 <script>
@@ -103,6 +105,7 @@ export default {
   -webkit-box-direction: normal;
   -webkit-box-shadow: 0 0 3px #00f;
   box-shadow: 0 0 3px #00f;
+  background-color: #031322;
   background-image: url(./src/images/bg.bigscreen.png);
 }
 .yiqing-zonghe {

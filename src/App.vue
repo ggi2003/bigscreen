@@ -8,7 +8,6 @@
 <script>
 import BigscreenIndex from "./components/bigscreen/index";
 
-
 export default {
   name: "App",
   components: {
@@ -24,6 +23,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0px;
+  background-color: #2c3e50;
+  background-image: url(./components/bigscreen/src/images/bg.bigscreen.png);
 }
 </style>
