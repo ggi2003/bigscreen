@@ -1,5 +1,5 @@
 <template>
-  <!-- <dv-full-screen-container> -->
+  <dv-full-screen-container>
   <!--//å¤§å±ç»ä»¶-->
   <div class="back">
     <dv-border-box-11 title="疫 情 汇 总 大 屏" :titleWidth="400">
@@ -24,7 +24,8 @@
           </div>
           <div class="yiqing-other-list in-down">
             <dv-border-box-13 :color="[, '#273d7b']">
-              <city-capsule :selectedProvince="selectedArea"></city-capsule>
+              <!-- <city-capsule :selectedProvince="selectedArea"></city-capsule> -->
+              <ve-line class="veline" width="300px" height="300px"  :data="chartData" :settings="chartSettings"></ve-line>
             </dv-border-box-13>
           </div>
         </div>
@@ -48,7 +49,7 @@
       </div>
     </dv-border-box-11>
   </div>
-  <!-- </dv-full-screen-container> -->
+  </dv-full-screen-container>
 </template>
 
 <script>
@@ -72,7 +73,23 @@ export default {
     return {
       isPhone: false,
       userjson: null,
-      selectedArea: ""
+      selectedArea: "",
+      chartData:{
+        columns:['日期','成本','利润','占比','其他'],
+        rows:[{'成本':1523,'日期':'1月1日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1511,'日期':'1月2日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1523,'日期':'1月3日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1533,'日期':'1月4日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1543,'日期':'1月5日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1553,'日期':'1月6日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1563,'日期':'1月7日','利润':1333,'占比':0.33,'其他':100},
+          {'成本':1573,'日期':'1月8日','利润':1333,'占比':0.33,'其他':100},
+          ], 
+      },
+      chartSettings:{
+        metrics:['成本','利润'],
+        dimension:['日期'],
+      }
     };
   },
   mounted() {
@@ -192,5 +209,10 @@ export default {
 }
 .right {
   width: 25%;
+}
+.veline{
+  border:1px solid red;
+  width:300px;
+  height:300px;
 }
 </style>

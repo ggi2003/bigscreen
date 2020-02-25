@@ -11,7 +11,6 @@
   export default {
     name: "ChinaMap",
     props: {
-        // ["userJson"]
         splitsList: {
             type: [Object, Array],
             default: ()=>{return [  {
@@ -54,22 +53,22 @@
         userJson: {
             type: [Object, Array],
             default:  ()=>{return [{
-                "name": "åäº¬",
+                "name": "北京",
                 "value": 599
               }, {
-                "name": "ä¸æµ·",
+                "name": "上海",
                 "value": 142
               }, {
-                "name": "é»é¾æ±",
+                "name": "黑龙江",
                 "value": 44
               }, {
-                "name": "æ·±å³",
+                "name": "深圳",
                 "value": 92
               }, {
-                "name": "æ¹å",
+                "name": "湖北",
                 "value": 810
               }, {
-                "name": "åå·",
+                "name": "四川",
                 "value": 453
               }]}
         }

@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "bigscreen",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@vue/cli-plugin-babel": "4.1.1",
     "echarts": "4.6.0",
     "moment": "2.24.0",
+    "v-charts": "latest",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -46,10 +47,6 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "keywords": [
-    "vue",
-    "vuejs",
-    "starter"
-  ],
-  "description": "Vue.js example starter project"
+  "keywords": [],
+  "description": "大屏"
 }
